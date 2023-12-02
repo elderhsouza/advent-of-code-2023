@@ -6,7 +6,7 @@ function getCalibrationCode(input: string) {
     ["four", "f4r"], ["five", "f5e"], ["six", "s6x"],
     ["seven", "s7n"], ["eight", "e8t"], ["nine", "n9e"],
   ]);
-  const re = new RegExp(`(?=(${Array.from(replacements.keys()).map(n => n).join('|')}))`, 'g');
+  const re = new RegExp(`(?=(${Array.from(replacements.keys()).join('|')}))`, 'g');
 
   return input
     .split("\n")
